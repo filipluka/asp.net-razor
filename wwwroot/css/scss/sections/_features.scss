@@ -1,0 +1,21 @@
+﻿#features{
+
+    padding: 60px 0;
+    background-color: #eff2fc;
+
+    & .container {
+        text-align: center;
+    }
+}
+
+.tool-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.box {
+    max-width: 30%;
+}

@@ -1,0 +1,53 @@
+﻿@page
+@model ASP.NETCore_RazorPages.Pages.SignUpModel
+@{
+    ViewData["Title"] = Model.PageTitle;
+}
+
+<section id="signup">
+    <div class="container">
+
+        <form method="post" asp-asp-controller="Auth" asp-action="SignUp" novalidate>
+            <h1>Create Account</h1>
+            <p>Already have en account? <a asp-page="/SignIn">Sign in here</a></p>
+
+            <div class="content__form">
+                <div class="input-group input-group__name-group">
+                    <div class="input-group__name">
+                        <label asp-for="@Model.Form.FirstName"></label>
+                        <input asp-for=@Model.Form.FirstName />
+                        <span asp-validation-for="@Model.Form.FirstName"></span>
+                    </div>
+                    <div class="input-group__name">
+                        <label asp-for="@Model.Form.LastName"></label>
+                        <input asp-for=@Model.Form.LastName />
+                        <span asp-validation-for="@Model.Form.LastName"></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label asp-for="@Model.Form.Email"></label>
+                    <span asp-validation-for="@Model.Form.Email"></span>
+                    <input asp-for=@Model.Form.Email />
+                </div>
+                <div class="input-group">
+                    <label asp-for="@Model.Form.Password"></label>
+                    <span asp-validation-for="@Model.Form.Password"></span>
+                    <input asp-for=@Model.Form.Password />
+                </div>
+                <div class="input-group">
+                    <label asp-for="@Model.Form.ConfirmPassword"></label>
+                    <span asp-validation-for="@Model.Form.ConfirmPassword"></span>
+                    <input asp-for=@Model.Form.ConfirmPassword />
+                </div>
+                <div class="checkbox-group">
+                    <input asp-for=@Model.Form.Terms />
+                    <label asp-for="@Model.Form.Terms">I agree to the <a asp-asp-page="/terms">Terms</a></label>
+                    <span asp-validation-for="@Model.Form.Terms"></span>
+                </div>
+            </div>
+            <button class="btn-theme-s" type="submit">Sign up</button>
+        </form>
+    </div>
+</section>
+
+@await Html.PartialAsync("_ValidationScriptPartial");

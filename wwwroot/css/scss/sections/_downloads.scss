@@ -1,0 +1,46 @@
+﻿#downloads {
+    background-color: #eff2fc;
+}
+
+.container {
+
+    &__downloads {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.content {
+    &__downloads {
+        padding: 50px;
+
+        &--right {
+            padding: 150px 250px 0 100px
+        }
+
+        &--box {
+            display: flex;
+            padding-top: 30px;
+        }
+
+        &--box-right {
+            align-self: flex-end;
+        }
+
+        &--box-left {
+            min-width: 70%;
+        }
+
+        & h4 {
+            padding-top: 10px;
+        }
+
+        & h6 {
+            margin-bottom: 0;
+        }
+
+        & p {
+            margin-bottom: 0;
+        }
+    }
+}

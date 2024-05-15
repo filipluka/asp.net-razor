@@ -1,0 +1,29 @@
+﻿
+#signin {
+    padding-top: 100px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @include lg {
+            width: 45%;
+        }
+
+        @include lg {
+            width: 35%;
+        }
+
+        form {
+            display: grid;
+            gap: 0 2rem;
+        }
+    }
+
+    #forgot-password {
+        text-align: center;
+        margin: 1rem 0;
+    }
+}

@@ -1,0 +1,40 @@
+﻿@page
+@model ASP.NETCore_RazorPages.Pages.SignInModel
+@{
+    ViewData["Title"] = Model.PageTitle;
+}
+
+<section id="signin">
+    <div class="container">
+        <form method="post" novalidate>
+            <h1>Welcome back</h1>
+            <p>Don't' have en account yet? <a asp-page="/SignUp">Sign up here</a></p>
+            <div class="content__form">
+                <div class="input-group">
+                    <label asp-for="@Model.Form.Email"></label>
+                    <span asp-validation-for="@Model.Form.Email"></span>
+                    <input asp-for=@Model.Form.Email />
+                </div>
+                <div class="input-group">
+                    <label asp-for="@Model.Form.Password"></label>
+                    <span asp-validation-for="@Model.Form.Password"></span>
+                    <input asp-for=@Model.Form.Password />
+                </div>
+                <div class="checkbox-group">
+                    <input asp-for=@Model.Form.RememberMe />
+                    <label asp-for="@Model.Form.RememberMe">Remember me</label>
+                    <span asp-validation-for="@Model.Form.RememberMe"></span>
+                </div>
+            </div>
+            <button class="btn-theme-s" type="submit">Sign in</button>
+            <a id="forgot-password" asp-page="/forgot">Forgot your password?</a>
+
+            <hr />
+            <div id="external-signin"></div>
+        </form>
+      
+    </div>
+</section>
+
+@await Html.PartialAsync("_ValidationScriptPartial");
+

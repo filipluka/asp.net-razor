@@ -1,0 +1,30 @@
+﻿#showcase {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.background-image {
+    max-width: 50%;
+}
+
+.content {
+    padding: 70px 0px 70px 100px;
+    max-width: 80%;
+
+    & h1 {
+        margin: 30px 0;
+    }
+
+    & p {
+        margin-bottom: 30px;
+    }
+
+    & a {
+        max-width: 210px;
+        margin-bottom: 90px;
+    }
+}
+
+.brands {
+    margin-top: 20px;
+}

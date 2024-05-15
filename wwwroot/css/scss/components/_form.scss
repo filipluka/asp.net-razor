@@ -1,0 +1,57 @@
+﻿form {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+
+    .input-group {
+        display: grid;
+        margin: 20px 0;
+
+        &__name {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+        }
+
+        &__name-group {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .checkbox-group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+
+        input {
+            height: 16px;
+            width: 16px;
+        }
+
+        label {
+            margin: 20px 0 20px 10px;
+            font-weight: 400;
+        }
+    }
+
+    label {
+        margin-bottom: 3px;
+        font-weight: 700;
+    }
+
+    input {
+        padding: 1rem;
+        border-radius: 8px !important;
+        border: 1px solid $gray-700;
+    }
+
+    .input-validation-error {
+        border: 1px solid $danger;
+    }
+
+    .field-validation-error {
+        color: $danger;
+    }
+}

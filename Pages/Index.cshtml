@@ -1,0 +1,175 @@
+﻿@page
+@using ASP.NETCore_RazorPages.Pages.Components
+@model ASP.NETCore_RazorPages.Pages.IndexModel
+@{
+    ViewData["Title"] = "Silicon";
+}
+
+<section id="showcase">
+    <img class="background-image" src="images/showcase-taskmaster.svg">
+    <div class="container">
+        <div class="content">
+            <h1>Task Management Assistant You Gonna Love</h1>
+            <p>We offer you a new generation of task management system. Plan, manage & track all your tasks in one flexible tool.</p>
+            <a class="btn-theme-s" href="#">Get started for free</a>
+            <h6>Largest companies use our tool to work efficiently</h6>
+            <div class="brands">
+                @if (Model.Brands != null)
+                {
+                    @foreach (var brand in Model.Brands)
+                    {
+                        <img src="@brand" alt="" />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <h1>What Do You Get with Our Tool?</h1>
+        <p>Make sure all your tasks are organized so you can set the priorities and focus on important.</p>
+        <div class="tool-features">
+            @if (@Model.Features != null)
+            {
+                @foreach (var box in @Model.Features)
+                {
+                    <div class="box">
+                        <img src="@box.Icon " alt="" />
+                        <h5>@box.Title</h5>
+                        <p>@box.Description</p>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+
+<section id="mode">
+    <div class="container">
+        <div class="content-mode__upp">
+            <h1>Switch between Light & Dark Mode</h1>
+            <img class="background-image-mode" src="images/MacBookPro-dark.svg">
+        </div>
+        <div class="content-mode__down">
+            <img class="image-dashboard" src="images/dashboard.svg">
+            <div class="content-mode__right">
+                <h2>Manage Your Work</h2>
+                <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="far fa-check-circle"></i></span>Powerful project management</li>
+                    <li><span class="fa-li"><i class="far fa-check-circle"></i></span>Transparent work management</li>
+                    <li><span class="fa-li"><i class="far fa-check-circle"></i></span>Manage work & focus on the most important tasks</li>
+                    <li><span class="fa-li"><i class="far fa-check-circle"></i></span>Track your progress with interactive charts</li>
+                    <li><span class="fa-li"><i class="far fa-check-circle"></i></span>Easiest way to track time spent on tasks</li>
+                </ul>
+                <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel { ClassName = "btn-theme", Link = "#", Icon = "fa-sharp fa-regular fa-arrow-right", Text = "Learn more" }' />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="downloads">
+    <div class="container container__downloads">
+        <div class="content__downloads">
+            <img class="background-image-downloads" src="images/download.svg">
+        </div>
+        <div class="content__downloads content__downloads--right">
+            <h2>Download Our App for Any Devices:</h2>
+            <div class="content__downloads--box">
+                <div class="content__downloads--box-left">
+                    <h6>App Store</h6>
+                    <img class="content__downloads--image" src="images/icons/rating.svg">
+                    <h4>Editor's Choice</h4>
+                    <p>rating 4.7, 187K+ reviews</p>
+                </div>
+                <div class="content__downloads--box-right">
+                    <img class="content__downloads--image" src="images/icons/appStore.svg">
+                </div>
+            </div>
+            <div class="content__downloads--box">
+                <div class="content__downloads--box-left">
+                    <h6>Google Play</h6>
+                    <img class="content__downloads--image" src="images/icons/rating.svg">
+                    <h4>App of the Day</h4>
+                    <p>rating 4.8, 30K+ reviews</p>
+                </div>
+                <div class="content__downloads--box-right">
+                    <img class="content__downloads--image" src="images/icons/googleplay.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tools">
+    <div class="container">
+        <div class="content content__tools">
+            <div class="content__tools-head">
+                <h1>Integrate Top Work Tools</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+            </div>
+            <div class="content__tools-body">
+                @if (@Model.Tools != null)
+                {
+                    @foreach (var tool in Model.Tools)
+                    {
+                        <div class="@tool.ClassName">
+                            <img src="@tool.Icon">
+                            <p>@tool.Text</p>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="subscribe">
+    <div class="container">
+        <div class="subscribe__content">
+            <div class="subscribe__header">
+                <h1>Don't Want to Miss Anything?</h1>
+                <img src="images/icons/arrows.svg">
+            </div>
+            <div class="subscribe__body">
+                <h5>Sign up for Newsletters</h5>
+                <div class="subscribe__body--checkboxes">
+                    <div class="subscribe__body--checkbox">
+                        <input type="checkbox" checked="false">
+                        <p>Daily Newsletter</p>
+                    </div>
+                    <div class="subscribe__body--checkbox">
+                        <input type="checkbox" checked="false">
+                        <p>Event Updates</p>
+                    </div>
+                </div>
+                <div class="subscribe__body--checkboxes">
+                    <div class="subscribe__body--checkbox">
+                        <input type="checkbox" checked="false">
+                        <p>Advertising Updates</p>
+                    </div>
+                    <div class="subscribe__body--checkbox">
+                        <input type="checkbox" checked="false">
+                        <p>Startups Weekly</p>
+                    </div>
+                </div>
+                <div class="subscribe__body--checkboxes">
+                    <div class="subscribe__body--checkbox">
+                        <input type="checkbox" checked="false">
+                        <p>Week in Review</p>
+                    </div>
+                    <div class="subscribe__body--checkbox">
+                        <input type="checkbox" checked="false">
+                        <p></p>Podcasts
+                    </div>
+                </div>
+            </div>
+            <div class="subscribe__form">
+                <form method="post">
+                    <input type="email" name="emailaddress">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+</section>
